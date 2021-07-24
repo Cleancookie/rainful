@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Plants\PlantController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,5 +21,7 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
+
+Route::get('/plants', [PlantController::class, 'list']);
 
 require __DIR__.'/auth.php';
