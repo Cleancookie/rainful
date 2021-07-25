@@ -2,7 +2,6 @@
 
 namespace App\Models\Plants;
 
-use App\Models\Plants\Plants\Plants\Location;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;

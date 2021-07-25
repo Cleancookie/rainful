@@ -9,12 +9,19 @@ use Illuminate\Support\Facades\Auth;
 
 class PlantController extends Controller
 {
-    public function list()
+    public function index()
     {
         $plants = Plant::where('owned_by', Auth::id())->paginate();
 
-        return view('plants/list', [
+        return view('plants/index', [
             'plants' => $plants
+        ]);
+    }
+
+    public function show(Plant $plant)
+    {
+        return view('plants/show', [
+            'plant' => $plant
         ]);
     }
 }

@@ -25,7 +25,7 @@ class PlantFactory extends Factory
     {
         return [
             'name' => $this->faker->name(),
-            'description' => $this->faker->sentence(12),
+            'description' => $this->faker->paragraph(),
         ];
     }
 }
