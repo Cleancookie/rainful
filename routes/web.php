@@ -22,6 +22,6 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::get('/plants', [PlantController::class, 'list']);
+Route::get('/plants', [PlantController::class, 'list'])->name('plant.list');
 
 require __DIR__.'/auth.php';
