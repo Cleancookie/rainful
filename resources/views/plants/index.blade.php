@@ -9,6 +9,7 @@
         <div class="max-w-xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
+                    <a href="{{ route('plant.create') }}" class="text-xs underline text-gray-400">New plant</a>
                     @foreach ($plants->items() as $plant)
                         <p class="py-1">
                             <a href="{{ route('plant.show', $plant->id) }}">{{ $plant->name }}</a>

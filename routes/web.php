@@ -23,6 +23,8 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 Route::get('/plants', [PlantController::class, 'index'])->name('plant.index');
+Route::get('/plants/create', [PlantController::class, 'create'])->name('plant.create');
+Route::post('/plants/store', [PlantController::class, 'store'])->name('plant.store');
 Route::get('/plants/{plant:id}', [PlantController::class, 'show'])->name('plant.show');
 
 require __DIR__.'/auth.php';
