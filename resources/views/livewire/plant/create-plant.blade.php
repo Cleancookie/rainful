@@ -1,4 +1,4 @@
-<form action="{{ route('plant.store') }}" method="POST" wire:submit.prevent="save">
+<form action="#" wire:submit.prevent="save">
     @csrf
 
     <div class="form-control my-4">

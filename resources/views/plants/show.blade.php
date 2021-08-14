@@ -12,7 +12,12 @@
                     <a href="{{ route('plant.index') }}" class="text-xs underline text-gray-400">Back to plants</a>
                     <img class="mx-auto my-2" src="https://picsum.photos/500/250" alt="">
                     <h1 class="text-5xl">{{ $plant->name }}</h1>
-                    <small class="text-gray-500">by {{ $plant->user->name }}</small>
+                    <div>
+                        <small class="text-gray-500">by {{ $plant->user->name }}</small>
+                    </div>
+                    <div>
+                        <small class="text-gray-500">Planted on {{ $plant->created_at->format('d/m/Y') }}</small>
+                    </div>
 
                     <p>{{ $plant->description ?? 'No description set' }}</p>
                 </div>
