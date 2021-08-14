@@ -13,6 +13,11 @@ class Plant extends Model
     use HasFactory;
     use SoftDeletes;
 
+    public $fillable = [
+        'name',
+        'description',
+    ];
+
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class, 'owned_by');
