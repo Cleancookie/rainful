@@ -9,7 +9,7 @@
         </div>
         <div class="flex-none px-2 mx-2">
             <span class="text-lg font-bold">
-                Rainful
+                <a href="{{ route('dashboard') }}">Rainful</a>
             </span>
         </div>
         <div class="flex-1 px-2 mx-2">

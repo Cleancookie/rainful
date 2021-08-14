@@ -7,7 +7,7 @@
         </label>
         <input type="text" name="name" placeholder="Mr. Petals" class="input input-bordered @error('plant.name') input-error @enderror" wire:model.debounce.300ms="plant.name">
         <label class="label" for="name">
-            <span class="label-text-alt">&nbsp @error('plant.name'){{ $message }} @enderror</span>
+            <span class="label-text-alt text-error">&nbsp @error('plant.name'){{ $message }} @enderror</span>
         </label>
     </div>
 
@@ -17,7 +17,7 @@
         </label>
         <input type="text" name="description" placeholder="A housewarming gift from mum" class="input input-bordered @error('plant.description') input-error @enderror" wire:model.debounce.300ms="plant.description">
         <label class="label" for="description">
-            <span class="label-text-alt">&nbsp @error('plant.description') {{ $message }} @enderror</span>
+            <span class="label-text-alt text-error">&nbsp @error('plant.description') {{ $message }} @enderror</span>
         </label>
     </div>
 
