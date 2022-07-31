@@ -7,6 +7,7 @@
     "require": {
         "php": "^7.4|^8.0",
         "fideloper/proxy": "^4.4",
+        "filament/filament": "^2.0",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^9.0",
@@ -36,6 +37,9 @@
         }
     },
     "scripts": {
+        "post-update-cmd": [
+            "@php artisan filament:upgrade"
+        ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"
