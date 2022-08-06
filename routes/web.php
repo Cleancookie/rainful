@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Plants\PlantController;
 use Illuminate\Support\Facades\Route;
+use Symfony\Component\Yaml\Yaml;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,5 +26,19 @@ Route::get('/dashboard', function () {
 Route::get('/plants', [PlantController::class, 'index'])->name('plant.index');
 Route::get('/plants/create', [PlantController::class, 'create'])->name('plant.create');
 Route::get('/plants/{plant:id}', [PlantController::class, 'show'])->name('plant.show');
+
+Route::get('/test', function () {
+    $value = Yaml::parse("foo:");
+
+    $valuer = Yaml::dump([
+        'one' => '1',
+        'two' => [
+            2,
+            3
+        ],
+        'three' => []
+    ]);
+    dd($valuer);
+});
 
 require __DIR__.'/auth.php';
