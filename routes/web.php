@@ -36,8 +36,8 @@ Route::get('/test', function () {
             2,
             3
         ],
-        'three' => []
-    ]);
+        'three' => null
+    ], Yaml::DUMP_NULL_AS_TILDE);
     dd($valuer);
 });
 
